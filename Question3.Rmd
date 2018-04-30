@@ -39,7 +39,7 @@ table(subdata1$bphigh4)
 
 Q3 <- glm(subdata1$cvdinfr4 ~ subdata1$sleptim1+subdata1$bphigh4+subdata1$smoke100+subdata1$toldhi2, data=subdata1, family = "binomial")
 summary(Q3)
-plot(Q3)
+
 
 ```
 
