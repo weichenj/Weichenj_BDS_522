@@ -1,0 +1,39 @@
+---
+title: "Weichen's Final Project BDS 522"
+---
+```{r setup, include=FALSE}
+library(ggplot2)
+library(dplyr)
+load("brfss2013.RData")
+```
+
+#What is the data source?
+The Behavioral Risk Factor Surveillance System (BRFSS) is the nation’s premier system of health-related telephone surveys that collect state data about U.S. residents regarding their health-related risk behaviors, chronic health conditions, and use of preventive services. 
+
+#When were the data collected?
+The Newest one is 2016, but I only find the Rdata from 2013.
+
+#How were they collected?
+There are 486,303 records for 2016, by telephone survey. The November update includes recoding of responses for a variable (LASTDEN3) in California’s data and a calculated variable (_RFPAP33) set to missing in eight states which did not ask a question (HADHYST2) correctly for eight months.
+
+#What are the units of analysis?
+Number of people, and score for mental health and physical health and BMI index
+#Describe each variable you are planning to use.
+For continuous variables, provide the mean, standard deviation and a histogram.
+There will be more data been selected in question 3, to see more detailed description, see question 3
+
+```{r cars}
+project1 <- c(brfss2013$educa,brfss2013$sex,brfss2013$income2,brfss2013$physhlth,brfss2013$menthlth,brfss2013$X_bmi5,brfss2013$genhlth,brfss2013$smoke100)
+
+summary(brfss2013$sleptim1)
+#Median of the sleeptime is 7hours, Sd is around 1 hour, and I don't why there is someone says sleeping hours is 450!
+summary(brfss2013$income2)
+plot(brfss2013$income2)
+#Seesms that the distribution is left skewed which makes sesne, rich people are still minority in this country.
+plot(brfss2013$educa)
+#it seems that college graduted are the marjority in this data set.
+summary(brfss2013$X_bmi5)
+hist(brfss2013$X_bmi5)
+# The bmi index is pretty normal distributed, and the mean is 2782.
+```
+

@@ -1,0 +1,13 @@
+name: "Weichen Jin"
+output_dir: "."
+navbar:
+  title: "BDS 522 Final Project"
+  left:
+    - text: "Intro"
+      href: index.html
+    - text: "Question 1"
+      href: Question1.html
+    - text: "Question 2"
+      href: Question2.html
+    - text: "Question 3"
+      href: Question3.html

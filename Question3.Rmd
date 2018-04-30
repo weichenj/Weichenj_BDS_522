@@ -1,0 +1,53 @@
+#Reserach Question #3
+#Lastly, I want to know heart attack acna be predicted using sleep time and smoking and blood pressure. I want to use logistic regression to predict this.
+
+#So we have to see those follow elements: 
+#Cvdinfr4 : ever disgonised with heart attack
+#Toldhi2 :ever told blood cholesterol high
+#Bphgh4: ever told bllod pressure high
+#Spletm1:how many hour do you sleep
+#Smoke100: ever smoke within the last 100 days
+
+```{r}
+Q3 <- names(brfss2013) %in% c("cvdinfr4","smoke100","toldhi2", "bphigh4", "sleptim1")
+subdata <- brfss2013[Q3]
+subdata$cvdinfr4 <- replace(subdata$cvdinfr4, which(is.na(subdata$cvdinfr4)), "No")
+
+#Make sure that No NA index in our data, so that we have better significance
+summary(subdata$cvdinfr4)
+
+#Treat those NA’s into No for smoker, so that I have better conclusion in the end.
+subdata$smoke100 <- replace(subdata$smoke100,which(is.na(subdata$smoke100)),"No")
+summary(subdata$smoke100)
+  
+#Treat those NA’s into No for smoker, so that I have better conclusion in the end.
+subdata$smoke100 <- replace(subdata$smoke100,which(is.na(subdata$smoke100)),"No")
+
+#Now I want to treat the NA to be the No, so that it is easier for me to conclude later. We
+subdata$toldhi2 <- replace(subdata$toldhi2, which(is.na(subdata$toldhi2)), "No")
+summary(subdata$toldhi2)
+
+#Look at HIGH blood Pressure Data
+table(subdata$bphigh4)
+#I have to make sure that female told only during pregnancy to Yes, and told borderline or pre-hypertensive to Yes. In order to make sure logistic regression.
+subdata1 <- subdata
+subdata1$bphigh4 <- as.factor(ifelse(subdata1$bphigh4=="Yes", "Yes", (ifelse(subdata1$bphigh4=="Yes, but female told only during pregnancy", "Yes",(ifelse(subdata1$bphigh4=="Told borderline or pre-hypertensive", "Yes", "No"))))))
+table(subdata1$bphigh4)
+
+#Now we have better data:
+table(subdata1$bphigh4)
+
+Q3 <- glm(subdata1$cvdinfr4 ~ subdata1$sleptim1+subdata1$bphigh4+subdata1$smoke100+subdata1$toldhi2, data=subdata1, family = "binomial")
+summary(Q3)
+plot(Q3)
+
+```
+
+#Odds of Heart Attack = e^2.713*e^(-0.0004Sleeptime)*e^(-2.21Highbloodpressure)*e^(0.6853NotSmooking)*e^(0.8988NothighbloodCholestero)
+#It is pretty clear that high blood pressure and smoking and blood cholesterol high are statistically significant when we predict the heart attack, 
+#Intercept mean that when a person doesn’t sleep, not high blood pressure, not smoking, not high cholesterol, the odd ratio of have heart attack is e^2.713
+#the odds ratio of having a heart attack for people with high blood pressure is 0.32
+#the odds ratio of having a heart attack for people who smoking in the last 100 days is 15.07
+#the odds ratio of having a heart attack for people who have high cholesterol is 2.457
+#What makes me confused is that sleep time does affect the heart attack that much in this data set which is contradict with what people usually think.
+

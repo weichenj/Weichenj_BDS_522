@@ -1,0 +1,34 @@
+---
+title: "index"
+---
+
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(dplyr)
+load("brfss2013.RData")
+```
+
+##1,What is the data source?
+The Behavioral Risk Factor Surveillance System (BRFSS) is the nation’s premier system of health-related telephone surveys that collect state data about U.S. residents regarding their health-related risk behaviors, chronic health conditions, and use of preventive services. 
+
+##2,When were the data collected?
+The Newest one is 2016, but I only find the Rdata from 2013
+
+##3,How were they collected?
+There are 486,303 records for 2016, by telephone survey. The November update includes recoding of responses for a variable (LASTDEN3) in California’s data and a calculated variable (_RFPAP33) set to missing in eight states which did not ask a question (HADHYST2) correctly for eight months.
+4What are the units of analysis?
+Number of people, and score for mental health and physical health and BMI index
+2. Describe each variable you are planning to use.
+For continuous variables, provide the mean, standard deviation and a histogram.
+
+
+```{r cars}
+project1 <- c(brfss2013$educa,brfss2013$sex,brfss2013$income2,brfss2013$physhlth,brfss2013$menthlth,brfss2013$X_bmi5,brfss2013$genhlth,brfss2013$smoke100)
+summary(brfss2013$physhlth)
+hist(brfss2013$physhlth)
+summary(brfss2013$menthlth)
+hist(brfss2013$menthlth)
+summary(brfss2013$X_bmi5)
+hist(brfss2013$X_bmi5)
+```

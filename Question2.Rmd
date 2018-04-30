@@ -1,0 +1,24 @@
+---
+title: "Question2"
+---
+#Secondly, 
+#I want to know the BMI’s relation with  Physical health and Mental Health. 
+# I also want to Buid a regression among BMI and variable of Income and Sleep time.
+
+
+```{r}
+ggplot(brfss2013, aes(income2, fill = X_bmi5))+geom_bar(position = "stack")
+summary(lm(brfss2013$X_bmi5 ~ factor(brfss2013$income2)*brfss2013$sleptim1))
+plot(lm(brfss2013$X_bmi5 ~ factor(brfss2013$income2)*brfss2013$sleptim1))
+```
+
+
+#BMI = 2931.938+58.44*IncomeLess15000+5.57*IncomeLess20000+16.113*IncomeLess25000+33.932*IncomeLess35000+30.643*IncomeLess50000+55.8*IncomeLess75000+10.4*IncomeMore75000 -7.003*Sleeptime-9.208*IncomeLess15000*Sleeptime-5.905*IncomeLess20000*Sleeptime-10.120*IncomeLess25000*Sleeptime-15.046*Less35000*Sleeptime-14.937*IncomeLess5000*Sleeptime -21.020*IncomeLess*Sleeptime -25.273*IncomeMore75000*Sleeptime                           
+#From the regreesion above, we can see that among all the factor, only the income more than 75000 per year and less 15000 per year indiviuals has positively significance for BMI and the interpetation would be Keep the sleeping time zero hour, and income less than $15000 per year, increase 58 in BMI, and keep the sleeping time zero hour, and income more than $75000 per year, increases the BMI for 10.404.
+
+#From the plot, we can see that the distribtion of residuals is not good, and violate our assumption of regression.
+```{r}
+#I want to test the regression without interaction, here is the regression
+summary(lm(brfss2013$X_bmi5 ~ factor(brfss2013$income2)*brfss2013$sleptim1))
+```
+#This is really interesting, without the interaction, income levels and sleep time are all significantly affect the BMI, but I think this is not meaningful, here we treat the income level as factors, so the prediction in this regression should not be considered.  

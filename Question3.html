@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">BDS 522 Final Project</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Intro</a>
+</li>
+<li>
+  <a href="Question1.html">Question 1</a>
+</li>
+<li>
+  <a href="Question2.html">Question 2</a>
+</li>
+<li>
+  <a href="Question3.html">Question 3</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<div id="reserach-question-3" class="section level1">
+<h1>Reserach Question #3</h1>
+</div>
+<div id="lastly-i-want-to-know-heart-attack-acna-be-predicted-using-sleep-time-and-smoking-and-blood-pressure.-i-want-to-use-logistic-regression-to-predict-this." class="section level1">
+<h1>Lastly, I want to know heart attack acna be predicted using sleep time and smoking and blood pressure. I want to use logistic regression to predict this.</h1>
+</div>
+<div id="so-we-have-to-see-those-follow-elements" class="section level1">
+<h1>So we have to see those follow elements:</h1>
+</div>
+<div id="cvdinfr4-ever-disgonised-with-heart-attack" class="section level1">
+<h1>Cvdinfr4 : ever disgonised with heart attack</h1>
+</div>
+<div id="toldhi2-ever-told-blood-cholesterol-high" class="section level1">
+<h1>Toldhi2 :ever told blood cholesterol high</h1>
+</div>
+<div id="bphgh4-ever-told-bllod-pressure-high" class="section level1">
+<h1>Bphgh4: ever told bllod pressure high</h1>
+</div>
+<div id="spletm1how-many-hour-do-you-sleep" class="section level1">
+<h1>Spletm1:how many hour do you sleep</h1>
+</div>
+<div id="smoke100-ever-smoke-within-the-last-100-days" class="section level1">
+<h1>Smoke100: ever smoke within the last 100 days</h1>
+<pre class="r"><code>Q3 &lt;- names(brfss2013) %in% c(&quot;cvdinfr4&quot;,&quot;smoke100&quot;,&quot;toldhi2&quot;, &quot;bphigh4&quot;, &quot;sleptim1&quot;)
+subdata &lt;- brfss2013[Q3]
+subdata$cvdinfr4 &lt;- replace(subdata$cvdinfr4, which(is.na(subdata$cvdinfr4)), &quot;No&quot;)
+
+#Make sure that No NA index in our data, so that we have better significance
+summary(subdata$cvdinfr4)</code></pre>
+<pre><code>##    Yes     No 
+##  29284 462491</code></pre>
+<pre class="r"><code>#Treat those NA’s into No for smoker, so that I have better conclusion in the end.
+subdata$smoke100 &lt;- replace(subdata$smoke100,which(is.na(subdata$smoke100)),&quot;No&quot;)
+summary(subdata$smoke100)</code></pre>
+<pre><code>##    Yes     No 
+## 215201 276574</code></pre>
+<pre class="r"><code>#Treat those NA’s into No for smoker, so that I have better conclusion in the end.
+subdata$smoke100 &lt;- replace(subdata$smoke100,which(is.na(subdata$smoke100)),&quot;No&quot;)
+
+#Now I want to treat the NA to be the No, so that it is easier for me to conclude later. We
+subdata$toldhi2 &lt;- replace(subdata$toldhi2, which(is.na(subdata$toldhi2)), &quot;No&quot;)
+summary(subdata$toldhi2)</code></pre>
+<pre><code>##    Yes     No 
+## 183501 308274</code></pre>
+<pre class="r"><code>#Look at HIGH blood Pressure Data
+table(subdata$bphigh4)</code></pre>
+<pre><code>## 
+##                                        Yes 
+##                                     198921 
+## Yes, but female told only during pregnancy 
+##                                       3680 
+##                                         No 
+##                                     282687 
+##        Told borderline or pre-hypertensive 
+##                                       5067</code></pre>
+<pre class="r"><code>#I have to make sure that female told only during pregnancy to Yes, and told borderline or pre-hypertensive to Yes. In order to make sure logistic regression.
+subdata1 &lt;- subdata
+subdata1$bphigh4 &lt;- as.factor(ifelse(subdata1$bphigh4==&quot;Yes&quot;, &quot;Yes&quot;, (ifelse(subdata1$bphigh4==&quot;Yes, but female told only during pregnancy&quot;, &quot;Yes&quot;,(ifelse(subdata1$bphigh4==&quot;Told borderline or pre-hypertensive&quot;, &quot;Yes&quot;, &quot;No&quot;))))))
+table(subdata1$bphigh4)</code></pre>
+<pre><code>## 
+##     No    Yes 
+## 282687 207668</code></pre>
+<pre class="r"><code>#Now we have better data:
+table(subdata1$bphigh4)</code></pre>
+<pre><code>## 
+##     No    Yes 
+## 282687 207668</code></pre>
+<pre class="r"><code>Q3 &lt;- glm(subdata1$cvdinfr4 ~ subdata1$sleptim1+subdata1$bphigh4+subdata1$smoke100+subdata1$toldhi2, data=subdata1, family = &quot;binomial&quot;)
+summary(Q3)</code></pre>
+<pre><code>## 
+## Call:
+## glm(formula = subdata1$cvdinfr4 ~ subdata1$sleptim1 + subdata1$bphigh4 + 
+##     subdata1$smoke100 + subdata1$toldhi2, family = &quot;binomial&quot;, 
+##     data = subdata1)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.9435   0.1630   0.2551   0.4145   0.6367  
+## 
+## Coefficients:
+##                       Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)          2.7193984  0.0321865  84.489   &lt;2e-16 ***
+## subdata1$sleptim1   -0.0006745  0.0040312  -0.167    0.867    
+## subdata1$bphigh4Yes -1.2100482  0.0147595 -81.984   &lt;2e-16 ***
+## subdata1$smoke100No  0.6933410  0.0129044  53.729   &lt;2e-16 ***
+## subdata1$toldhi2No   0.9066816  0.0136442  66.452   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 216130  on 483139  degrees of freedom
+## Residual deviance: 194158  on 483135  degrees of freedom
+##   (8635 observations deleted due to missingness)
+## AIC: 194168
+## 
+## Number of Fisher Scoring iterations: 6</code></pre>
+<pre class="r"><code>plot(Q3)</code></pre>
+<p><img src="Question3_files/figure-html/unnamed-chunk-1-1.png" width="672" /><img src="Question3_files/figure-html/unnamed-chunk-1-2.png" width="672" /><img src="Question3_files/figure-html/unnamed-chunk-1-3.png" width="672" /><img src="Question3_files/figure-html/unnamed-chunk-1-4.png" width="672" /></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

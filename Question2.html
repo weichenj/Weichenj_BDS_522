@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Question2</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">BDS 522 Final Project</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Intro</a>
+</li>
+<li>
+  <a href="Question1.html">Question 1</a>
+</li>
+<li>
+  <a href="Question2.html">Question 2</a>
+</li>
+<li>
+  <a href="Question3.html">Question 3</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Question2</h1>
+
+</div>
+
+
+<div id="secondly" class="section level1">
+<h1>Secondly,</h1>
+</div>
+<div id="i-want-to-know-the-bmis-relation-with-physical-health-and-mental-health." class="section level1">
+<h1>I want to know the BMI’s relation with Physical health and Mental Health.</h1>
+</div>
+<div id="buid-a-regression-among-bmi-and-variable-of-income-and-sleep-time." class="section level1">
+<h1>Buid a regression among BMI and variable of Income and Sleep time.</h1>
+<pre class="r"><code>ggplot(brfss2013, aes(income2, fill = X_bmi5))+geom_bar(position = &quot;stack&quot;)</code></pre>
+<p><img src="Question2_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>summary(lm(brfss2013$X_bmi5 ~ factor(brfss2013$income2)*brfss2013$sleptim1))</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = brfss2013$X_bmi5 ~ factor(brfss2013$income2) * brfss2013$sleptim1)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -2844.5  -413.6   -98.5   298.4  6938.1 
+## 
+## Coefficients:
+##                                                               Estimate
+## (Intercept)                                                   2931.938
+## factor(brfss2013$income2)Less than $15,000                      58.442
+## factor(brfss2013$income2)Less than $20,000                       5.574
+## factor(brfss2013$income2)Less than $25,000                      16.113
+## factor(brfss2013$income2)Less than $35,000                      33.932
+## factor(brfss2013$income2)Less than $50,000                      30.643
+## factor(brfss2013$income2)Less than $75,000                      55.802
+## factor(brfss2013$income2)$75,000 or more                        10.404
+## brfss2013$sleptim1                                              -7.003
+## factor(brfss2013$income2)Less than $15,000:brfss2013$sleptim1   -9.208
+## factor(brfss2013$income2)Less than $20,000:brfss2013$sleptim1   -5.905
+## factor(brfss2013$income2)Less than $25,000:brfss2013$sleptim1  -10.120
+## factor(brfss2013$income2)Less than $35,000:brfss2013$sleptim1  -15.046
+## factor(brfss2013$income2)Less than $50,000:brfss2013$sleptim1  -14.937
+## factor(brfss2013$income2)Less than $75,000:brfss2013$sleptim1  -21.020
+## factor(brfss2013$income2)$75,000 or more:brfss2013$sleptim1    -25.273
+##                                                               Std. Error
+## (Intercept)                                                       13.923
+## factor(brfss2013$income2)Less than $15,000                        20.260
+## factor(brfss2013$income2)Less than $20,000                        19.655
+## factor(brfss2013$income2)Less than $25,000                        19.564
+## factor(brfss2013$income2)Less than $35,000                        19.708
+## factor(brfss2013$income2)Less than $50,000                        19.399
+## factor(brfss2013$income2)Less than $75,000                        19.951
+## factor(brfss2013$income2)$75,000 or more                          18.157
+## brfss2013$sleptim1                                                 1.946
+## factor(brfss2013$income2)Less than $15,000:brfss2013$sleptim1      2.822
+## factor(brfss2013$income2)Less than $20,000:brfss2013$sleptim1      2.730
+## factor(brfss2013$income2)Less than $25,000:brfss2013$sleptim1      2.721
+## factor(brfss2013$income2)Less than $35,000:brfss2013$sleptim1      2.741
+## factor(brfss2013$income2)Less than $50,000:brfss2013$sleptim1      2.704
+## factor(brfss2013$income2)Less than $75,000:brfss2013$sleptim1      2.789
+## factor(brfss2013$income2)$75,000 or more:brfss2013$sleptim1        2.541
+##                                                               t value
+## (Intercept)                                                   210.578
+## factor(brfss2013$income2)Less than $15,000                      2.885
+## factor(brfss2013$income2)Less than $20,000                      0.284
+## factor(brfss2013$income2)Less than $25,000                      0.824
+## factor(brfss2013$income2)Less than $35,000                      1.722
+## factor(brfss2013$income2)Less than $50,000                      1.580
+## factor(brfss2013$income2)Less than $75,000                      2.797
+## factor(brfss2013$income2)$75,000 or more                        0.573
+## brfss2013$sleptim1                                             -3.599
+## factor(brfss2013$income2)Less than $15,000:brfss2013$sleptim1  -3.262
+## factor(brfss2013$income2)Less than $20,000:brfss2013$sleptim1  -2.163
+## factor(brfss2013$income2)Less than $25,000:brfss2013$sleptim1  -3.719
+## factor(brfss2013$income2)Less than $35,000:brfss2013$sleptim1  -5.490
+## factor(brfss2013$income2)Less than $50,000:brfss2013$sleptim1  -5.525
+## factor(brfss2013$income2)Less than $75,000:brfss2013$sleptim1  -7.538
+## factor(brfss2013$income2)$75,000 or more:brfss2013$sleptim1    -9.948
+##                                                               Pr(&gt;|t|)    
+## (Intercept)                                                    &lt; 2e-16 ***
+## factor(brfss2013$income2)Less than $15,000                    0.003920 ** 
+## factor(brfss2013$income2)Less than $20,000                    0.776710    
+## factor(brfss2013$income2)Less than $25,000                    0.410156    
+## factor(brfss2013$income2)Less than $35,000                    0.085113 .  
+## factor(brfss2013$income2)Less than $50,000                    0.114199    
+## factor(brfss2013$income2)Less than $75,000                    0.005160 ** 
+## factor(brfss2013$income2)$75,000 or more                      0.566664    
+## brfss2013$sleptim1                                            0.000319 ***
+## factor(brfss2013$income2)Less than $15,000:brfss2013$sleptim1 0.001105 ** 
+## factor(brfss2013$income2)Less than $20,000:brfss2013$sleptim1 0.030531 *  
+## factor(brfss2013$income2)Less than $25,000:brfss2013$sleptim1 0.000200 ***
+## factor(brfss2013$income2)Less than $35,000:brfss2013$sleptim1 4.02e-08 ***
+## factor(brfss2013$income2)Less than $50,000:brfss2013$sleptim1 3.30e-08 ***
+## factor(brfss2013$income2)Less than $75,000:brfss2013$sleptim1 4.78e-14 ***
+## factor(brfss2013$income2)$75,000 or more:brfss2013$sleptim1    &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 612.6 on 399856 degrees of freedom
+##   (91903 observations deleted due to missingness)
+## Multiple R-squared:  0.01066,    Adjusted R-squared:  0.01062 
+## F-statistic: 287.1 on 15 and 399856 DF,  p-value: &lt; 2.2e-16</code></pre>
+<pre class="r"><code>plot(lm(brfss2013$X_bmi5 ~ factor(brfss2013$income2)*brfss2013$sleptim1))</code></pre>
+<p><img src="Question2_files/figure-html/unnamed-chunk-1-2.png" width="672" /><img src="Question2_files/figure-html/unnamed-chunk-1-3.png" width="672" /><img src="Question2_files/figure-html/unnamed-chunk-1-4.png" width="672" /><img src="Question2_files/figure-html/unnamed-chunk-1-5.png" width="672" /></p>
+</div>
+<div id="bmi-2931.93858.44incomeless150005.57incomeless2000016.113incomeless2500033.932incomeless3500030.643incomeless5000055.8incomeless7500010.4incomemore75000--7.003sleeptime-9.208incomeless15000sleeptime-5.905incomeless20000sleeptime-10.120incomeless25000sleeptime-15.046less35000sleeptime-14.937incomeless5000sleeptime--21.020incomelesssleeptime--25.273incomemore75000sleeptime" class="section level1">
+<h1>BMI = 2931.938+58.44<em>IncomeLess15000+5.57</em>IncomeLess20000+16.113<em>IncomeLess25000+33.932</em>IncomeLess35000+30.643<em>IncomeLess50000+55.8</em>IncomeLess75000+10.4<em>IncomeMore75000 -7.003</em>Sleeptime-9.208<em>IncomeLess15000</em>Sleeptime-5.905<em>IncomeLess20000</em>Sleeptime-10.120<em>IncomeLess25000</em>Sleeptime-15.046<em>Less35000</em>Sleeptime-14.937<em>IncomeLess5000</em>Sleeptime -21.020<em>IncomeLess</em>Sleeptime -25.273<em>IncomeMore75000</em>Sleeptime</h1>
+</div>
+<div id="from-the-regreesion-above-we-can-see-that-among-all-the-factor-only-the-income-more-than-75000-per-year-and-less-15000-per-year-indiviuals-has-positively-significance-for-bmi-and-the-interpetation-would-be-keep-the-sleeping-time-zero-hour-and-income-less-than-15000-per-year-increase-58-in-bmi-and-keep-the-sleeping-time-zero-hour-and-income-more-than-75000-per-year-increases-the-bmi-for-10.404." class="section level1">
+<h1>From the regreesion above, we can see that among all the factor, only the income more than 75000 per year and less 15000 per year indiviuals has positively significance for BMI and the interpetation would be Keep the sleeping time zero hour, and income less than $15000 per year, increase 58 in BMI, and keep the sleeping time zero hour, and income more than $75000 per year, increases the BMI for 10.404.</h1>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
