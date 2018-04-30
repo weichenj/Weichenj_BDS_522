@@ -212,8 +212,8 @@ $(document).ready(function () {
 <div id="i-want-to-know-the-bmis-relation-with-physical-health-and-mental-health." class="section level1">
 <h1>I want to know the BMI’s relation with Physical health and Mental Health.</h1>
 </div>
-<div id="buid-a-regression-among-bmi-and-variable-of-income-and-sleep-time." class="section level1">
-<h1>Buid a regression among BMI and variable of Income and Sleep time.</h1>
+<div id="i-also-want-to-buid-a-regression-among-bmi-and-variable-of-income-and-sleep-time." class="section level1">
+<h1>I also want to Buid a regression among BMI and variable of Income and Sleep time.</h1>
 <pre class="r"><code>ggplot(brfss2013, aes(income2, fill = X_bmi5))+geom_bar(position = &quot;stack&quot;)</code></pre>
 <p><img src="Question2_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <pre class="r"><code>summary(lm(brfss2013$X_bmi5 ~ factor(brfss2013$income2)*brfss2013$sleptim1))</code></pre>
@@ -309,6 +309,50 @@ $(document).ready(function () {
 </div>
 <div id="from-the-regreesion-above-we-can-see-that-among-all-the-factor-only-the-income-more-than-75000-per-year-and-less-15000-per-year-indiviuals-has-positively-significance-for-bmi-and-the-interpetation-would-be-keep-the-sleeping-time-zero-hour-and-income-less-than-15000-per-year-increase-58-in-bmi-and-keep-the-sleeping-time-zero-hour-and-income-more-than-75000-per-year-increases-the-bmi-for-10.404." class="section level1">
 <h1>From the regreesion above, we can see that among all the factor, only the income more than 75000 per year and less 15000 per year indiviuals has positively significance for BMI and the interpetation would be Keep the sleeping time zero hour, and income less than $15000 per year, increase 58 in BMI, and keep the sleeping time zero hour, and income more than $75000 per year, increases the BMI for 10.404.</h1>
+</div>
+<div id="from-the-plot-we-can-see-that-the-distribtion-of-residuals-is-not-good-and-violate-our-assumption-of-regression." class="section level1">
+<h1>From the plot, we can see that the distribtion of residuals is not good, and violate our assumption of regression.</h1>
+<pre class="r"><code>#I want to test the regression without interaction, here is the regression
+summary(lm(brfss2013$X_bmi5 ~ factor(brfss2013$income2)+brfss2013$sleptim1))</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = brfss2013$X_bmi5 ~ factor(brfss2013$income2) + brfss2013$sleptim1)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -2803.0  -413.6   -96.3   298.3  6939.8 
+## 
+## Coefficients:
+##                                             Estimate Std. Error t value
+## (Intercept)                                3022.9744     6.0978 495.749
+## factor(brfss2013$income2)Less than $15,000   -4.2889     5.5843  -0.768
+## factor(brfss2013$income2)Less than $20,000  -33.6268     5.2580  -6.395
+## factor(brfss2013$income2)Less than $25,000  -52.6509     5.0655 -10.394
+## factor(brfss2013$income2)Less than $35,000  -69.5657     4.9226 -14.132
+## factor(brfss2013$income2)Less than $50,000  -72.0715     4.7444 -15.191
+## factor(brfss2013$income2)Less than $75,000  -89.7481     4.7034 -19.082
+## factor(brfss2013$income2)$75,000 or more   -165.0862     4.4147 -37.395
+## brfss2013$sleptim1                          -20.2874     0.6698 -30.288
+##                                            Pr(&gt;|t|)    
+## (Intercept)                                 &lt; 2e-16 ***
+## factor(brfss2013$income2)Less than $15,000    0.442    
+## factor(brfss2013$income2)Less than $20,000  1.6e-10 ***
+## factor(brfss2013$income2)Less than $25,000  &lt; 2e-16 ***
+## factor(brfss2013$income2)Less than $35,000  &lt; 2e-16 ***
+## factor(brfss2013$income2)Less than $50,000  &lt; 2e-16 ***
+## factor(brfss2013$income2)Less than $75,000  &lt; 2e-16 ***
+## factor(brfss2013$income2)$75,000 or more    &lt; 2e-16 ***
+## brfss2013$sleptim1                          &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 612.7 on 399863 degrees of freedom
+##   (91903 observations deleted due to missingness)
+## Multiple R-squared:  0.01031,    Adjusted R-squared:  0.01029 
+## F-statistic: 520.9 on 8 and 399863 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div id="this-is-really-interesting-without-the-interaction-income-levels-and-sleep-time-are-all-significantly-affect-the-bmi-but-i-think-this-is-not-meaningful-here-we-treat-the-income-level-as-factors-so-the-prediction-in-this-regression-should-not-be-considered." class="section level1">
+<h1>This is really interesting, without the interaction, income levels and sleep time are all significantly affect the BMI, but I think this is not meaningful, here we treat the income level as factors, so the prediction in this regression should not be considered.</h1>
 </div>
 
 

@@ -220,23 +220,32 @@ $(document).ready(function () {
 </div>
 <div id="what-are-the-units-of-analysis" class="section level1">
 <h1>What are the units of analysis?</h1>
-<p>Number of people, and score for mental health and physical health and BMI index #Describe each variable you are planning to use. For continuous variables, provide the mean, standard deviation and a histogram.</p>
+<p>Number of people, and score for mental health and physical health and BMI index #Describe each variable you are planning to use. For continuous variables, provide the mean, standard deviation and a histogram. There will be more data been selected in question 3, to see more detailed description, see question 3</p>
 <pre class="r"><code>project1 &lt;- c(brfss2013$educa,brfss2013$sex,brfss2013$income2,brfss2013$physhlth,brfss2013$menthlth,brfss2013$X_bmi5,brfss2013$genhlth,brfss2013$smoke100)
-summary(brfss2013$physhlth)</code></pre>
+
+summary(brfss2013$sleptim1)</code></pre>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
-##   0.000   0.000   0.000   4.353   3.000  60.000   10957</code></pre>
-<pre class="r"><code>hist(brfss2013$physhlth)</code></pre>
+##   0.000   6.000   7.000   7.052   8.000 450.000    7387</code></pre>
+<pre class="r"><code>#Median of the sleeptime is 7hours, Sd is around 1 hour, and I don&#39;t why there is someone says sleeping hours is 450!
+summary(brfss2013$income2)</code></pre>
+<pre><code>## Less than $10,000 Less than $15,000 Less than $20,000 Less than $25,000 
+##             25441             26794             34873             41732 
+## Less than $35,000 Less than $50,000 Less than $75,000   $75,000 or more 
+##             48867             61509             65231            115902 
+##              NA&#39;s 
+##             71426</code></pre>
+<pre class="r"><code>plot(brfss2013$income2)</code></pre>
 <p><img src="index_files/figure-html/cars-1.png" width="672" /></p>
-<pre class="r"><code>summary(brfss2013$menthlth)</code></pre>
-<pre><code>##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA&#39;s 
-##    0.000    0.000    0.000    3.383    2.000 5000.000     8627</code></pre>
-<pre class="r"><code>hist(brfss2013$menthlth)</code></pre>
+<pre class="r"><code>#Seesms that the distribution is left skewed which makes sesne, rich people are still minority in this country.
+plot(brfss2013$educa)</code></pre>
 <p><img src="index_files/figure-html/cars-2.png" width="672" /></p>
-<pre class="r"><code>summary(brfss2013$X_bmi5)</code></pre>
+<pre class="r"><code>#it seems that college graduted are the marjority in this data set.
+summary(brfss2013$X_bmi5)</code></pre>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
 ##       1    2367    2663    2782    3081    9769   26727</code></pre>
 <pre class="r"><code>hist(brfss2013$X_bmi5)</code></pre>
 <p><img src="index_files/figure-html/cars-3.png" width="672" /></p>
+<pre class="r"><code># The bmi index is pretty normal distributed, and the mean is 2782.</code></pre>
 </div>
 
 

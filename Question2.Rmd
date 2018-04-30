@@ -19,6 +19,6 @@ plot(lm(brfss2013$X_bmi5 ~ factor(brfss2013$income2)*brfss2013$sleptim1))
 #From the plot, we can see that the distribtion of residuals is not good, and violate our assumption of regression.
 ```{r}
 #I want to test the regression without interaction, here is the regression
-summary(lm(brfss2013$X_bmi5 ~ factor(brfss2013$income2)*brfss2013$sleptim1))
+summary(lm(brfss2013$X_bmi5 ~ factor(brfss2013$income2)+brfss2013$sleptim1))
 ```
 #This is really interesting, without the interaction, income levels and sleep time are all significantly affect the BMI, but I think this is not meaningful, here we treat the income level as factors, so the prediction in this regression should not be considered.  

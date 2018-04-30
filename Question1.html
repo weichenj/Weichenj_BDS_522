@@ -209,10 +209,8 @@ $(document).ready(function () {
 <p>I think I want to see what cause difference among people’s health, and lifetime. The reason why some people live longer and better than others could be due to education, smoking, alcohol consumptions, or gender could be an effect to make difference .</p>
 <p>research question 1:</p>
 <pre class="r"><code>ggplot(Q1, aes(genhlth, fill = smoke100))+geom_bar(position = &quot;stack&quot;)</code></pre>
-<p><img src="Question1_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<pre class="r"><code>##Clearly in the Excellent and Very Good health, people who don&#39;t smoke have greater proporotion. Whihc means smoking reduce the health.
-##Let&#39;s see the Chi square to test the relationship between the two varibles.
-chisq.test(genhlth,smoke100)</code></pre>
+<p><img src="Question1_files/figure-html/unnamed-chunk-1-1.png" width="672" /> Clearly in the Excellent and Very Good health, people who don’t smoke have greater proporotion. Whihc means smoking reduce the health. Let’s see the Chi square to test the relationship between the two varibles.</p>
+<pre class="r"><code>chisq.test(genhlth,smoke100)</code></pre>
 <pre><code>## 
 ##  Pearson&#39;s Chi-squared test
 ## 
