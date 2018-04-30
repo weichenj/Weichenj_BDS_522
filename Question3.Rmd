@@ -43,7 +43,7 @@ plot(Q3)
 
 ```
 
-#Odds of Heart Attack = e^2.713xe^(-0.0004Sleeptime)xe^(-2.21Highbloodpressure)xe^(0.6853NotSmooking)xe^(0.8988NothighbloodCholestero)
+#Odds of Heart Attack = e^2.713x e^(-0.0004Sleeptime)x e^(-2.21Highbloodpressure)x e^(0.6853NotSmooking)x e^(0.8988NothighbloodCholestero)
 #It is pretty clear that high blood pressure and smoking and blood cholesterol high are statistically significant when we predict the heart attack, 
 #Intercept mean that when a person doesn’t sleep, not high blood pressure, not smoking, not high cholesterol, the odd ratio of have heart attack is e^2.713
 #the odds ratio of having a heart attack for people with high blood pressure is 0.32
